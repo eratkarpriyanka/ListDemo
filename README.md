@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://drive.google.com/open?id=0B11ydJm6trP9Y2Q2U1NCX1dXUTg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/gkiUy9e' title='Video Walkthrough' width='100' alt='Video Walkthrough' />
 
 GIF : http://i.imgur.com/gkiUy9e.gifv
 

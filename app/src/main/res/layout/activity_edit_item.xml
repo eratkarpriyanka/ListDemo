@@ -17,7 +17,7 @@
         android:layout_marginBottom="25dp"
         android:text="Edit Item Below : "
         android:textSize="15dp"
-        />
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -26,7 +26,8 @@
         android:ems="10"
         android:imeOptions="actionDone"
         android:inputType="textMultiLine"
-        />
+        android:background="@drawable/edittext_border"
+        android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/btnSave"
@@ -34,5 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:text="Save"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
         />
 </LinearLayout>

@@ -13,12 +13,14 @@
     <Button
         android:id="@+id/btnAddItem"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="New Button" />
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:text="Add" />
 
     <ListView
         android:id="@+id/lvItemlist"
@@ -27,7 +29,10 @@
         android:layout_above="@+id/btnAddItem"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:divider="@color/colorPrimaryDark"
+        android:dividerHeight="1dp"
+        />
 
     <EditText
         android:id="@+id/editText"
@@ -37,7 +42,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnAddItem"
+        android:hint="Enter an item here ..."
         android:layout_toStartOf="@+id/btnAddItem"
         android:imeOptions="actionDone"
+        android:background="@drawable/edittext_border"
+        android:layout_marginRight="5dp"
         />
 </RelativeLayout>

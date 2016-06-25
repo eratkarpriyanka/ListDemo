@@ -9,7 +9,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class EditItemActivity extends AppCompatActivity implements View.OnClickListener {
+import com.codepath.listdemo.dialogs.DeleteItemDialog;
+
+public class EditItemActivity extends AppCompatActivity implements View.OnClickListener, DeleteItemDialog.ConfirmDeleteListener{
 
     Button btnSave;
     EditText etEditText;
@@ -51,5 +53,10 @@ public class EditItemActivity extends AppCompatActivity implements View.OnClickL
     public void hideSoftKeyboard(View view){
         InputMethodManager imm =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    @Override
+    public void onConfirmDelete(boolean shouldDelete) {
+
     }
 }

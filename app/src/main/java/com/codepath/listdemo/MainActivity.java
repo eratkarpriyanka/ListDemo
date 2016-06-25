@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,13 +20,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.codepath.listdemo.dialogs.DeleteItemDialog;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,DeleteItemDialog.ConfirmDeleteListener {
 
     private final int REQUEST_CODE_EDIT=100;
     ListView lvItems;
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ArrayAdapter<String> arrListAdapter;
     Button btnAddItem;
     EditText etAddItem;
+    private int clickedPosition=-1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-
-                /** Todo ask confirmation for deletion **/
-                arrItems.remove(position);
-                arrListAdapter.notifyDataSetChanged();
-                Toast.makeText(MainActivity.this, "item at position "+(position+1)+" deleted", Toast.LENGTH_SHORT).show();
-                writeItems();
-                arrListAdapter.notifyDataSetChanged();
+                showDeleteDialog();
+                clickedPosition = position;
                 return true;
             }
         });
@@ -76,6 +75,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         readItems();
         arrListAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrItems);
+    }
+
+    private void showDeleteDialog(){
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        DeleteItemDialog alertDialog = DeleteItemDialog.singleInstance("Remove item", "Are you sure?");
+        alertDialog.show(fragmentManager,"Fragment");
+
     }
 
     public void readItems(){
@@ -164,6 +171,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void hideSoftKeyboard(View view){
         InputMethodManager imm =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    @Override
+    public void onConfirmDelete(boolean shouldDelete) {
+
+        if(shouldDelete){
+
+            if(clickedPosition == -1)
+                return;
+            arrItems.remove(clickedPosition);
+            arrListAdapter.notifyDataSetChanged();
+            Toast.makeText(MainActivity.this, "item at position "+(clickedPosition+1)+" deleted", Toast.LENGTH_SHORT).show();
+            writeItems();
+            arrListAdapter.notifyDataSetChanged();
+        }
     }
 }
 

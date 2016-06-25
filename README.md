@@ -15,6 +15,12 @@ The following **required** functionality is completed:
 * User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list.
 * User can **persist todo items** and retrieve them properly on app restart
 
+The following **optional** functionality is completed:
+* Tweak the style improving the UI / UX, play with colors, images or backgrounds
+
+The following **additional** features are implemented:
+Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) for getting user confirmation to delete an item from todo list
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:

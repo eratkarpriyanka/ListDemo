@@ -3,13 +3,14 @@
     package="com.codepath.listdemo">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -19,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".EditItemActivity"
+        <activity android:name=".Activities.EditItemActivity"
             android:windowSoftInputMode="adjustResize">
 
         </activity>

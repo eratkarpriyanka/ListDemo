@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">ListDemo</string>
     <string name="action_settings">Settings</string>
+
+    <string name="empty_todo_list">Your to-do list is empty</string>
+    <string name="item_priority_hint">high/low/medium</string>
+    <string name="btn_save">Save</string>
+    <string name="dueDateHint">Choose date</string>
+
+    <string-array name="priority_array">
+        <item>high</item>
+        <item>low</item>
+        <item>medium</item>
+    </string-array>
 </resources>

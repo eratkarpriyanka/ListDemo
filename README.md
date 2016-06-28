@@ -5,7 +5,7 @@ including adding new items, editing and deleting an existing item.
 
 Submitted by **Priyanka Eratkar**
 
-Time Spent: **4** hours
+Time Spent: **20** hours
 
 ## User Stories
 
@@ -16,16 +16,25 @@ The following **required** functionality is completed:
 * User can **persist todo items** and retrieve them properly on app restart
 
 The following **optional** functionality is completed:
+* Persist the todo items [into SQLite](http://guides.codepath.com/android/Persisting-Data-to-the-Device#sqlite) instead of a text file
+* Improve style of the todo items in the list [using a custom adapter] *Cursor Adpater* (http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView) 
+* Add support for completion due dates for todo items (and display within listview item)
+* Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity to confirm item deletion
+* Add support for selecting the priority of each todo item 
 * Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 The following **additional** features are implemented:
-Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) for getting user confirmation to delete an item from todo list
+* Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) for getting user confirmation to delete an item from todo list
+* Use model classes to access data 
+* Use Spinner for priority select
+* Use Datepicker
+* Use reusable Activity to Add and Delete todo item
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/f6MTZea.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/XpZtsXV.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

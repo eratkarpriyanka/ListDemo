@@ -5,7 +5,7 @@ including adding new items, editing and deleting an existing item.
 
 Submitted by **Priyanka Eratkar**
 
-Time Spent: **4** hours
+Time Spent: **20** hours
 
 ## User Stories
 

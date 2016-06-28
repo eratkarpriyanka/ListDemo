@@ -3,6 +3,7 @@ package com.codepath.listdemo.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,17 @@ public class ToDoItemAdapter extends CursorAdapter{
         ToDoItem todoItem = todoItemData.getItemRecord(cursor);
         ViewHolder viewHolder = (ViewHolder)view.getTag();
         viewHolder.name.setText(todoItem.getName());
-        viewHolder.priority.setText(todoItem.getPriority());
+        String priority = todoItem.getPriority();
+        viewHolder.priority.setText(priority);
+        if(priority!=null && !priority.isEmpty()) {
+            if (priority.equalsIgnoreCase("high")) {
+                viewHolder.priority.setTextColor(Color.RED);
+            } else if (priority.equalsIgnoreCase("medium")) {
+                viewHolder.priority.setTextColor(Color.parseColor("#078f6b"));
+            } else {
+                viewHolder.priority.setTextColor(Color.LTGRAY);
+            }
+        }
         viewHolder.id = todoItem.getId();
     }
 

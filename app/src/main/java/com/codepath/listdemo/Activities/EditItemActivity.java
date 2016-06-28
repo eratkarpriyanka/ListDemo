@@ -89,6 +89,8 @@ public class EditItemActivity extends AppCompatActivity implements View.OnClickL
         if(toDoItem !=null) {
             updateRecordId= toDoItem.getId();
             etEditText.setText(toDoItem.getName());
+            if(!toDoItem.getName().isEmpty())
+                etEditText.setSelection(toDoItem.getName().length());
             etDueDate.setText(toDoItem.getDate());
             String priority= toDoItem.getPriority();
             if(!priority.isEmpty()) {

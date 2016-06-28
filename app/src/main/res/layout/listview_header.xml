@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/orange"
         android:layout_weight="1"/>
 
     <TextView
@@ -22,10 +22,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Priority"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/orange"
         android:gravity="center"
         android:textSize="20sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         android:layout_weight="1"/>
 
 </LinearLayout>

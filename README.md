@@ -24,11 +24,11 @@ The following **optional** functionality is completed:
 * Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 The following **additional** features are implemented:
-Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) for getting user confirmation to delete an item from todo list
-Use model classes to access data 
-Use Spinner for priority select
-Use Datepicker
-Use reusable Activity to Add and Delete todo item
+* Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) for getting user confirmation to delete an item from todo list
+* Use model classes to access data 
+* Use Spinner for priority select
+* Use Datepicker
+* Use reusable Activity to Add and Delete todo item
 
 ## Video Walkthrough 
 

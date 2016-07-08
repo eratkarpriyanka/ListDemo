@@ -108,7 +108,7 @@ public class EditItemActivity extends AppCompatActivity implements View.OnClickL
             }
 
         }else{
-            Log.i("edit", "item info null");
+            Log.i("edit", "item info null!");
         }
     }
 
